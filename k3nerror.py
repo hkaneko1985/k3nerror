@@ -6,6 +6,9 @@ import numpy as np
 # When X1 is Z-variables (low-dimensional data) and X2 is data of data of X-variables, this is k3n error in reconstruction (k3n-X-error).
 # k3n-error = k3n-Z-error + k3n-X-error
 
+# X1, X2: numpy.array or pandas.DataFrame
+# k: integer, the numbers of neighbor
+
 def k3nerror(X1, X2, k):
     sumofk3nerror = 0
     X1 = np.array(X1)
