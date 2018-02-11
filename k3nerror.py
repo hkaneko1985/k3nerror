@@ -8,6 +8,8 @@ import numpy as np
 
 def k3nerror(X1, X2, k):
     sumofk3nerror = 0
+    X1 = np.array(X1)
+    X2 = np.array(X2)
     for samplenumber in range(X1.shape[0]):
         X1distance = np.ndarray.flatten( np.sqrt( ( ( X1[:, np.newaxis] - X1[samplenumber,:])**2).sum(axis=2)))
         X1sortedindex = np.delete( np.argsort(X1distance), 0)
